@@ -22,7 +22,7 @@ const Sent = () => {
   }
 
 
-  
+ 
 
   return (
     <>
