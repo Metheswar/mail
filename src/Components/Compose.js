@@ -18,7 +18,7 @@ const Compose = () => {
 
 
   const handleComposeClick = async () => {
-    // Validate email format
+
     const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let toemailValue = toAddress.current.value;
 
@@ -28,10 +28,10 @@ const Compose = () => {
     }
     toemailValue = toemailValue.replace(/[@.]/g, '');
     setIsEmailValid(true);
-    const currentTime = new Date(); // Create a new Date object with the current time
-    console.log(currentTime); // Output the current time in your browser's console
+    const currentTime = new Date(); 
+    console.log(currentTime);
     
-    // You can also extract individual components of the time
+
     const hours = currentTime.getHours();
     const minutes = currentTime.getMinutes();
     const seconds = currentTime.getSeconds();
@@ -96,7 +96,7 @@ const Compose = () => {
       subject.current.value='';
       setEditorState(EditorState.createEmpty())
     }
-    // Additional logic for sending the composed email
+
   };
 
   return (
