@@ -47,7 +47,7 @@ const dispatch = useDispatch();
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     if (handleValidation()) {
-      // Perform login logic here
+     
       console.log("Login submitted");
       const loginHandler = async () =>{
         const url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBsBi6XuiXEAJS8LypGcACrNuK5h8i494Y';
@@ -71,12 +71,12 @@ const dispatch = useDispatch();
            dispatch(login())
            localStorage.setItem('email',email)
            localStorage.setItem('token',data.idToken)
-        //  await verifyEmailHandler(data.idToken,enteredEmail)
+    
                
          } else {
            const errorData = await response.json();
             setError(errorData.error.message);
-           // Handle error during signup, if needed
+
          }
         } catch(error){
          console.error('Error occurred:', error);
@@ -113,8 +113,7 @@ const dispatch = useDispatch();
         if (response.ok) {
           const data = await response.json();
           console.log(data)
-         // await setSignUpSuccess(true)
-         // await idTokenHandler(data.idToken)
+
             setError('')
           setSuccess('Signup Successfull')
           
@@ -122,10 +121,10 @@ const dispatch = useDispatch();
         } else {
           const errorData = await response.json();
           setError(errorData.error.message);
-          // Handle error during signup, if needed
+
         }
       } catch (error) {
-        // Handle any other errors that may occur during the fetch
+
         console.error('Error occurred:', error);
       } finally{
         setEmail('');
@@ -139,7 +138,6 @@ const dispatch = useDispatch();
   const handleForgotSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
-      // Perform forgot password logic here
       console.log("Forgot password submitted");
         const url = 'https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyBsBi6XuiXEAJS8LypGcACrNuK5h8i494Y';
         try {
@@ -157,8 +155,7 @@ const dispatch = useDispatch();
             if (response.ok) {
               const data = await response.json();
               console.log(data)
-             // await setSignUpSuccess(true)
-             // await idTokenHandler(data.idToken)
+
              setError('')
               setSuccess("Password Reset Link sent Successfully!!")
               
@@ -166,10 +163,10 @@ const dispatch = useDispatch();
             } else {
               const errorData = await response.json();
               setError(errorData.error.message);
-              // Handle error during signup, if needed
+         
             }
           }catch (error) {
-            // Handle any other errors that may occur during the fetch
+     
             console.error('Error occurred:', error);
           }finally{
             setEmail('')
