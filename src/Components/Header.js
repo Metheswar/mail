@@ -47,7 +47,7 @@ function Header() {
                 <path d="M 6 9 A 2.0002 2.0002 0 1 0 6 13 L 42 13 A 2.0002 2.0002 0 1 0 42 9 L 6 9 z M 6 22 A 2.0002 2.0002 0 1 0 6 26 L 42 26 A 2.0002 2.0002 0 1 0 42 22 L 6 22 z M 6 35 A 2.0002 2.0002 0 1 0 6 39 L 42 39 A 2.0002 2.0002 0 1 0 42 35 L 6 35 z"></path>
               </svg>
             </Button>
-            <Navbar.Brand href="#home" className="ms-2"><h2>Mail Client</h2></Navbar.Brand>
+            <Navbar.Brand href="#home" className="ms-2"><h2>MailHub</h2></Navbar.Brand>
           </div>
         
       </Navbar>
