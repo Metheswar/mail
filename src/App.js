@@ -48,13 +48,12 @@ function App() {
       }
     };
   
-    // Initial fetch
+   
     fetchData();
   
-    // Fetch data periodically
+
     const interval = setInterval(fetchData, 2000);
-  
-    // Clean up the interval when the component unmounts
+
     return () => {
       clearInterval(interval);
     };
@@ -82,13 +81,11 @@ function App() {
       }
     };
   
-    // Initial fetch
+   
     fetchData();
-  
-    // Fetch data periodically
+ 
     const interval = setInterval(fetchData, 2000);
   
-    // Clean up the interval when the component unmounts
     return () => {
       clearInterval(interval);
     };
